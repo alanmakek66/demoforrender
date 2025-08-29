@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Remote reboot controll</title>
+</head>
+<body>
+    <h1>Remote reboot controll</h1>
+    <label for="userInput">Enter a response:</label>
+    <form action="/updateValue" method="post">
+        <input type="text" id="userInput" name="input" placeholder="Enter your response" required>
+        <button type="submit">Update Value</button>
+    </form>
+
+    <div>
+        <h2>Current Value:</h2>
+        <p th:text="'Current value is: ' + ${currentValue}"></p>
+    </div>
+</body>
+</html>
